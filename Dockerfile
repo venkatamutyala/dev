@@ -30,6 +30,4 @@ WORKDIR /home/kubectl
 RUN wget https://github.com/jkroepke/helm-secrets/releases/latest/download/helm-secrets.tar.gz -O helm-secrets.tar.gz
 RUN mkdir -p .local/share/helm/plugins
 RUN tar -xzf helm-secrets.tar.gz -C "/home/kubectl/.local/share/helm/plugins"  
-COPY bash_profile .bash_profile
-RUN echo 'source ~/.bash_profile' >> .bashrc
 #ENTRYPOINT [ "/usr/local/bin/kubectl.sh" ]
